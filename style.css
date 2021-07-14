@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    color: rgb(73, 73, 73);
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+    
+}
+body{
+    background: hsl(185, 41%, 84%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#container1,#container2{
+    width: 45%;
+    height: 85%;
+    border-radius: 15px;
+}
+
+#container1 .text{
+    display: inline-block;   
+    margin-bottom: 10px;
+}
+
+.text_err{  
+    display: none;
+    margin-left: 17px;
+    color: hsl(36, 78%, 52%);
+    font-size: 13px;
+}
+
+
+
+.inp{
+    border-radius: 5px;
+    width: 80%;
+    height: 10%;
+    border: none;
+    background-color: rgb(73, 73, 73,0.05);
+    background-image: url('./tip-calculator-app-main/images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-size: 4%;
+    background-position-y: 7px;
+    background-position-x: 10px;
+    text-align: right;
+    padding:0 4%;
+  
+}
+
+.inp:nth-child(2){
+    margin: 5px 0 25px 0;
+ 
+}
+.inp:nth-child(6){
+  
+    margin-top: 5px;
+}
+
+.inp:focus-visible{
+    border: none;
+    box-shadow: 0 0 1px 2px hsl(172, 67%, 45%);
+    outline: 0;
+    border-radius: 5px;
+}
+.inp_err{
+
+    box-shadow: 0 0 1px 2px hsl(36, 78%, 52%);
+}
+
+ul{
+    margin-right: 60px;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 25%;
+    margin: 10px 10px 10px 0;
+    height: 28%;
+    border-radius: 4px;
+    background-color: hsl(183, 100%, 15%);
+    list-style-type: none;
+}
+
+ul .li:hover{
+    background:rgba(49, 180, 163,0.7);
+}
+
+#inp_li{
+    color: hsl(183, 100%, 15%);
+    text-align: center;
+    background: rgba(3, 3, 3, 0.1);
+    border: none;
+}
+#inp_li:focus-visible{
+    outline: none;
+    box-shadow: 0 0 1px 2px hsl(172, 67%, 45%);
+}
+#inp_li::placeholder{
+    color: hsl(183, 100%, 15%);
+}
+
+#container2{
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+#container2 .text2{
+    color: white;
+
+}
+#container2 .text3{
+    font-size: 12px;
+    color: hsl(186, 14%, 43%);
+}
+#container2 .text4{
+    overflow-wrap: anywhere;
+    color: hsl(172, 67%, 45%);
+    font-size: 40px;
+    width: 52%;
+    line-height: 39px;
+}
+
+#container2 .small_container{
+    width: 48%;
+    margin-bottom: 20%;
+}
+#container2 button{
+    cursor: pointer;
+    margin-top: 8%;
+    width: 100%;
+    height: 15%;
+    border: none;
+    background-color:  hsl(172, 67%, 45%);
+    border-radius: 4px;
+}
+
+#container2 button:hover{
+    background:rgb(66, 241, 218,0.9);
+}
+
+.li_click{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+@media (max-width: 1200px) {
+    #container{
+        height: 66%;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        border-radius: 20px;
+        background-color: hsl(0, 0%, 100%);
+    }
+    #container1{
+        margin-top: 100px;
+        width: 85%;
+    }
+    #container1 .text{
+       font-size: 10px;
+    }
+    #container1 .inp{
+        width: 100%;
+        height: 12%;
+        background-size: 3%;
+        background-position-y: 10px;
+    }
+    #container1 ul{
+        padding-bottom: 73px;
+        box-sizing: unset;
+    }
+    #container1 .li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 37%;
+        width: 40%;
+        list-style-type: none;
+    }
+    
+    #container2{
+        position: relative;
+        top: 15%;
+        padding-bottom: 40px;
+        width: 85%;
+    }
+    #container2 .text2{
+        font-size: 13px;
+    }
+    #container2 .text4{
+        font-size: 30px;
+    }
+    #container2 .small_container{
+        margin-bottom: 3%;
+    }
+    #container2 button{
+        height: 35%;
+        margin-top: 4%;
+    }
+}
